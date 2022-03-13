@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% include './include/header.html' %}
+{% block body %}
+    <article class="register-form">
+        <span>Register</span>
+        <hr>
+        <section>
+            <form action="{{ url_for('register') }}" method="post">
+                <label for="name">Name:
+                    <input type="text" name="name" id="name">
+                </label>
+                <label for="password">Password:
+                    <input type="password" name="password" id="password">
+                </label>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </article>
+{% endblock %}

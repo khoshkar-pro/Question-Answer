@@ -10,6 +10,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+  background: dimgray;
 }
 
 header {
@@ -23,6 +24,7 @@ header {
 
   span {
     font-size: 1rem;
+    text-transform: uppercase;
   }
 
   nav {
@@ -38,8 +40,53 @@ header {
         a {
           font-size: 1rem;
           padding: 10px;
+          color: black;
         }
       }
     }
   }
 }
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-self: center;
+  margin-top: 20px;
+  align-items: center;
+    span {
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      form {
+        label {
+          font-size: 1rem;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          input {
+            padding: 10px;
+            width: 500px;
+          }
+        }
+
+        button {
+          color: black;
+          background: darkorange;
+          font-size: 1rem;
+          padding: 10px 25px;
+          border: 0;
+          border-radius: 5px;
+          margin-top: 20px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
