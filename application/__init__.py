@@ -1,4 +1,4 @@
-from flask import Flask, g, render_template
+from flask import Flask, g, render_template, session
 import sqlite3, os
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(15).hex()
@@ -22,6 +22,13 @@ def db_close(error):
 def not_found(error):
     return render_template('404.html', title='Not found'), 404
 
+def user_session():
+    user = None
+    if 'user_session' in session:
+        user = session['user_session']
+        return user
+
 from application.routes import home
 from application.routes import register
 from application.routes import login
+from application.routes import logout
