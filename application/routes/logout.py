@@ -3,5 +3,5 @@ from application import app
 
 @app.route('/logout')
 def logout():
-    session.pop('user_session', None)
+    session.pop('user', None)
     return redirect(url_for('home'))
