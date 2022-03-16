@@ -2,7 +2,13 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/application/__init__.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/application/routes/answer.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/application/routes/ask.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/application/routes/home.py" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/application/routes/login.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/application/routes/promote.py" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/application/routes/register.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/application/routes/unanswered.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/application/routes/userSetup.py" dialect="GenericSQL" />
   </component>
 </project>

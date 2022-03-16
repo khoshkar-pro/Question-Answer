@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% include './include/header.html' %}
+{% block body %}
+    <article class="register-form">
+        <span>Users</span>
+        <p>Click on user to grant expert permission.</p>
+        <hr>
+        <section class="user-setup">
+            <ul>
+                {% for foo in result %}
+                    <li><a href="{{ url_for('promote', user_id=foo['id']) }}">{{ foo['name'] }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+    </article>
+{% endblock %}

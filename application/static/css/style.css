@@ -33,29 +33,44 @@ header {
         padding: 10px;
         color: black; }
 
-.register-form {
+.register-form, .ask-question {
   display: flex;
   flex-direction: column;
   width: 70%;
   align-self: center;
   margin-top: 20px;
   align-items: center; }
-  .register-form span {
+  .register-form span, .ask-question span {
     color: white;
     font-size: 1.5rem; }
-  .register-form section {
+  .register-form p, .ask-question p {
+    color: white;
+    font-size: 1rem; }
+  .register-form section, .ask-question section {
     display: flex;
     flex-direction: column;
-    align-items: center; }
-    .register-form section form label {
+    align-items: center;
+    width: 100%; }
+    .register-form section form label, .ask-question section form label {
       font-size: 1rem;
       color: white;
       display: flex;
       flex-direction: column; }
-      .register-form section form label input {
-        padding: 10px;
-        width: 500px; }
-    .register-form section form button {
+      .register-form section form label select, .ask-question section form label select {
+        font-size: 1rem;
+        padding: 5px;
+        text-transform: capitalize; }
+        .register-form section form label select option, .ask-question section form label select option {
+          font-size: 1rem;
+          text-transform: capitalize; }
+      .register-form section form label textarea, .ask-question section form label textarea {
+        padding: 5px;
+        font-size: 1rem; }
+      .register-form section form label input, .ask-question section form label input {
+        padding: 5px;
+        width: 500px;
+        font-size: 1rem; }
+    .register-form section form button, .ask-question section form button {
       color: black;
       background: darkorange;
       font-size: 1rem;
@@ -63,5 +78,21 @@ header {
       border: 0;
       border-radius: 5px;
       margin-top: 20px; }
-      .register-form section form button:hover {
+      .register-form section form button:hover, .ask-question section form button:hover {
         cursor: pointer; }
+  .register-form .user-setup ul, .ask-question .user-setup ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    .register-form .user-setup ul li, .ask-question .user-setup ul li {
+      padding: 5px;
+      font-size: 1rem;
+      color: white; }
+      .register-form .user-setup ul li:hover, .ask-question .user-setup ul li:hover {
+        background: darkgray; }
+      .register-form .user-setup ul li a, .ask-question .user-setup ul li a {
+        color: white;
+        font-size: 1rem;
+        text-decoration: none;
+        text-transform: uppercase; }

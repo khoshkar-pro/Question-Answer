@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% include './include/header.html' %}
+{% block body %}
+    <article class="register-form">
+        <span>Unanswered Questions</span>
+        <p>Click on question to answer it.</p>
+        <hr>
+        <section class="user-setup">
+            <ul>
+                {% for foo in result %}
+                    <li><a href="{{ url_for('answer', question_id=foo['qu_id']) }}">{{ foo['question_text'] }}</a><br><span style="font-size: 0.8rem;">Answered by: {{ foo['name'] }}</span></li>
+                {% endfor %}
+            </ul>
+        </section>
+    </article>
+{% endblock %}

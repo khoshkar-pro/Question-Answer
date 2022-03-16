@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% include './include/header.html' %}
+{% block body %}
+    <article class="ask-question">
+        <span>Question Reply</span>
+        <hr>
+        <section>
+            <span style="font-size: 0.8rem">Submit answer for:</span>
+            <span style="font-size: 0.8rem">{{ question_result['question_text'] }}</span>
+            <form method="post">
+                <label for="question">Answer:
+                    <textarea name="question" id="question" cols="50" rows="10"></textarea>
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </article>
+{% endblock %}

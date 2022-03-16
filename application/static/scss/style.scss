@@ -47,46 +47,99 @@ header {
   }
 }
 
-.register-form {
+.register-form, .ask-question {
   display: flex;
   flex-direction: column;
   width: 70%;
   align-self: center;
   margin-top: 20px;
   align-items: center;
-    span {
-      color: white;
-      font-size: 1.5rem;
-    }
 
-    section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      form {
-        label {
+  span {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  p {
+    color: white;
+    font-size: 1rem;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    form {
+      label {
+        font-size: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+
+        select {
           font-size: 1rem;
-          color: white;
-          display: flex;
-          flex-direction: column;
-          input {
-            padding: 10px;
-            width: 500px;
+          padding: 5px;
+          text-transform: capitalize;
+
+          option {
+            font-size: 1rem;
+            text-transform: capitalize;
           }
         }
 
-        button {
-          color: black;
-          background: darkorange;
+        textarea {
+          padding: 5px;
           font-size: 1rem;
-          padding: 10px 25px;
-          border: 0;
-          border-radius: 5px;
-          margin-top: 20px;
-          &:hover {
-            cursor: pointer;
-          }
+        }
+
+        input {
+          padding: 5px;
+          width: 500px;
+          font-size: 1rem;
+        }
+      }
+
+      button {
+        color: black;
+        background: darkorange;
+        font-size: 1rem;
+        padding: 10px 25px;
+        border: 0;
+        border-radius: 5px;
+        margin-top: 20px;
+
+        &:hover {
+          cursor: pointer;
         }
       }
     }
   }
+
+  .user-setup {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      li {
+        padding: 5px;
+        font-size: 1rem;
+        color: white;
+
+        &:hover {
+          background: darkgray;
+        }
+
+        a {
+          color: white;
+          font-size: 1rem;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

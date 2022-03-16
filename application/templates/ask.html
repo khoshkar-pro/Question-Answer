@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% include './include/header.html' %}
+{% block body %}
+    <article class="ask-question">
+        <span>Ask a question</span>
+        <hr>
+        <section>
+            <form action="{{ url_for('ask') }}" method="post">
+                <label for="question">Question:
+                    <textarea name="question" id="question" cols="50" rows="10"></textarea>
+                </label>
+                <label for="select">Expert:
+                    <select name="expert" id="select">
+                        {% for foo in exp_result %}
+                            <option value="{{ foo.id }}">{{ foo.name }}</option>
+                        {% endfor %}
+                    </select>
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </article>
+{% endblock %}

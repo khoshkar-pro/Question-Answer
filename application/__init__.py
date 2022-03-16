@@ -35,3 +35,8 @@ from application.routes import home
 from application.routes import register
 from application.routes import login
 from application.routes import logout
+from application.routes import userSetup
+from application.routes import promote
+from application.routes import ask
+from application.routes import unanswered
+from application.routes import answer
