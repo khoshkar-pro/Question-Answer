@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
-{% include './include/header.html' %}
 {% block body %}
+    {% from './include/header.html' import showlinks %}
+    {{ showlinks(user) }}
     <article class="ask-question">
         <span>Ask a question</span>
         <hr>

@@ -1,3 +1,4 @@
+{% macro showlinks(user) %}
 <header>
     <span>Question & Answer</span>
     <nav>
@@ -16,10 +17,10 @@
                 <li><a href="{{ url_for('logout') }}">Logout</a></li>
             {% endif %}
             {% if user and user['admin'] == 1 %}
-                <li><a href="#">Answer Question</a></li>
                 <li><a href="{{ url_for('user_setup') }}">User Setup</a></li>
                 <li><a href="{{ url_for('logout') }}">Logout</a></li>
             {% endif %}
         </ul>
     </nav>
 </header>
+{% endmacro %}

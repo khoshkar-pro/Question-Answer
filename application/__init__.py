@@ -31,6 +31,8 @@ def user_session():
         session_curr = db.execute('SELECT id, name, admin, expert FROM users WHERE name = ?', [user])
         session_db = session_curr.fetchone()
     return session_db
+
+
 from application.routes import home
 from application.routes import register
 from application.routes import login

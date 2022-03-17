@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% block title %}{{ title }}{% endblock %}
-{% include './include/header.html' %}
 {% block body %}
+    {% from './include/header.html' import showlinks %}
+    {{ showlinks(user) }}
     <article class="register-form">
         <span>Unanswered Questions</span>
         <p>Click on question to answer it.</p>

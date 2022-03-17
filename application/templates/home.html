@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% block title %}{{ title }}{% endblock %}
 {% block body %}
-    {% include './include/header.html' %}
+    {% from './include/header.html' import showlinks %}
+    {{ showlinks(user) }}
     <article class="register-form">
         <span>Answered Questions:</span>
         {#            <p>Click on user to grant expert permission.</p>#}

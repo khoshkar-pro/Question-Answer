@@ -4,6 +4,7 @@ from werkzeug.security import check_password_hash
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     db = db_get()
+    user = user_session()
     if request.method == 'POST':
         name = request.form['name']
         password = request.form['password']
@@ -14,5 +15,4 @@ def login():
             return redirect(url_for('home'))
         else:
             return render_template('login.html', title='Login', incorrect_password=True)
-    user = user_session()
     return render_template('login.html', title = 'Login', user=user)
